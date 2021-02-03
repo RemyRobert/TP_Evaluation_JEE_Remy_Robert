@@ -26,3 +26,40 @@ C’est la même chose avec les articles.
 Il doit y avoir un formulaire de création des articles et des clients. Nous ne ferons pas le formulaire de création de facture. Seulement afficher la liste
  
 
+
+SQL :
+
+CREATE TABLE client(
+    id INT AUTO_INCREMENT NOT NULL,
+    nom VARCHAR(100) NOT NULL,
+    adresse VARCHAR(100) NOT NULL,
+    CONSTRAINT pk_client PRIMARY KEY(id)
+);
+
+CREATE TABLE facture(
+    id INT AUTO_INCREMENT NOT NULL,
+    idclient INT NOT NULL,
+    dateFacture DATE NOT NULL,
+    numero VARCHAR(255) NOT NULL,
+    prix DOUBLE NOT NULL,
+    CONSTRAINT pk_facture PRIMARY KEY(id),
+    CONSTRAINT fk_facture_client FOREIGN KEY(idclient) REFERENCES client(id)
+);
+
+CREATE TABLE article(
+    id INT AUTO_INCREMENT NOT NULL,
+    nom VARCHAR(100) NOT NULL,
+    prix DOUBLE NOT NULL,
+    CONSTRAINT pk_article PRIMARY KEY(id)
+);
+
+CREATE TABLE ligneFacture(
+    id INT AUTO_INCREMENT NOT NULL,
+    idfacture INT NOT NULL,
+    idarticle INT NOT NULL,
+    qte INT NOT NULL,
+    prix DOUBLE NOT NULL,
+    CONSTRAINT pk_ligneFacture PRIMARY KEY(id),
+    CONSTRAINT fk_ligneFacture_facture FOREIGN KEY(idfacture) REFERENCES facture(id),
+    CONSTRAINT fk_ligneFacture_article FOREIGN KEY(idarticle) REFERENCES article(id)
+);
