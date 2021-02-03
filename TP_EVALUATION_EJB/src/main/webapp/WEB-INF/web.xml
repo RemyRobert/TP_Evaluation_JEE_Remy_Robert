@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<display-name>TP_EVALUATION_EJB</display-name>
+	
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name>HomeServlet</servlet-name>
+	   <url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	<servlet>
+	  <servlet-name>ClientServlet</servlet-name>
+	  <servlet-class>fr.epsi.controller.ClientServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>ClientServlet</servlet-name>
+	   <url-pattern>/createClient</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	  <servlet-name>ListClientServlet</servlet-name>
+	  <servlet-class>fr.epsi.controller.ListClientServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>ListClientServlet</servlet-name>
+	   <url-pattern>/listClient</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+	  <servlet-name>ArticleServlet</servlet-name>
+	  <servlet-class>fr.epsi.controller.ArticleServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>ArticleServlet</servlet-name>
+	   <url-pattern>/createArticle</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	  <servlet-name>ListArticleServlet</servlet-name>
+	  <servlet-class>fr.epsi.controller.ListArticleServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>ListArticleServlet</servlet-name>
+	   <url-pattern>/listArticle</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	  <servlet-name>ListFactureServlet</servlet-name>
+	  <servlet-class>fr.epsi.controller.ListFactureServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>ListFactureServlet</servlet-name>
+	   <url-pattern>/listFacture</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	  <servlet-name>FactureDetailServlet</servlet-name>
+	  <servlet-class>fr.epsi.controller.FactureDetailServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>FactureDetailServlet</servlet-name>
+	   <url-pattern>/defatilFacture</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>
