@@ -10,20 +10,21 @@ import javax.transaction.UserTransaction;
 
 import fr.epsi.entite.Article;
 
-public class ArticleDaoImpl implements ArticleDao{
-	
+public class ArticleDaoImpl implements ArticleDao {
+
 	EntityManager em;
 	UserTransaction utx;
 
 	public ArticleDaoImpl(EntityManager em, UserTransaction utx) {
-		this.em=em;
-		this.utx=utx;
+		this.em = em;
+		this.utx = utx;
 	}
+
 	public void create(Article a) {
 		try {
 			utx.begin();
 			em.persist(a);
-			
+
 			utx.commit();
 		} catch (NotSupportedException e) {
 			// TODO Auto-generated catch block
@@ -47,8 +48,7 @@ public class ArticleDaoImpl implements ArticleDao{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
 }

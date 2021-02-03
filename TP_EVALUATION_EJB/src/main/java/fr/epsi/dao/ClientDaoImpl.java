@@ -10,20 +10,21 @@ import javax.transaction.UserTransaction;
 
 import fr.epsi.entite.Client;
 
-public class ClientDaoImpl implements ClientDao{
-	
+public class ClientDaoImpl implements ClientDao {
+
 	EntityManager em;
 	UserTransaction utx;
 
 	public ClientDaoImpl(EntityManager em, UserTransaction utx) {
-		this.em=em;
-		this.utx=utx;
+		this.em = em;
+		this.utx = utx;
 	}
+
 	public void create(Client c) {
 		try {
 			utx.begin();
 			em.persist(c);
-			
+
 			utx.commit();
 		} catch (NotSupportedException e) {
 			// TODO Auto-generated catch block
@@ -47,8 +48,7 @@ public class ClientDaoImpl implements ClientDao{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
 }

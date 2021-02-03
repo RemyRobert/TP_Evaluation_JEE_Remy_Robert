@@ -1,6 +1,5 @@
 package fr.epsi.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -13,13 +12,8 @@ import javax.transaction.UserTransaction;
 
 import fr.epsi.dao.ArticleDao;
 import fr.epsi.dao.ArticleDaoImpl;
-import fr.epsi.dao.ClientDao;
-import fr.epsi.dao.ClientDaoImpl;
 import fr.epsi.dto.ArticleDTO;
-import fr.epsi.dto.ClientDTO;
 import fr.epsi.entite.Article;
-import fr.epsi.entite.Client;
-import fr.epsi.entite.Facture;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.BEAN)
@@ -43,10 +37,11 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	public List<Article> findAllArticles() {
-		List<Article> listeArticles = em.createQuery("SELECT a from Article a order by a.nom", Article.class).getResultList();
-        return listeArticles;
+		List<Article> listeArticles = em.createQuery("SELECT a from Article a order by a.nom", Article.class)
+				.getResultList();
+		return listeArticles;
 	}
-	
+
 	public Article findArticleById(Integer id) {
 		List<Article> list = findAllArticles();
 		for (Article a : list) {

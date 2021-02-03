@@ -1,6 +1,5 @@
 package fr.epsi.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;

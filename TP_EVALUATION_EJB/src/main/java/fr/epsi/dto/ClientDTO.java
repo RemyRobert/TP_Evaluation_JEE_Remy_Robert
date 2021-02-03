@@ -5,7 +5,6 @@ public class ClientDTO {
 	private String nom;
 	private String adresse;
 
-
 	public String getNom() {
 		return nom;
 	}
@@ -21,7 +20,5 @@ public class ClientDTO {
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
-
-	
 
 }

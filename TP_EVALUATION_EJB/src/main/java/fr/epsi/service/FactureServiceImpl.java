@@ -10,7 +10,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
 
-import fr.epsi.entite.Client;
 import fr.epsi.entite.Facture;
 
 @Stateless
@@ -28,7 +27,7 @@ public class FactureServiceImpl implements FactureService {
 				.getResultList();
 		return listeFactures;
 	}
-	
+
 	public Facture findFactureById(Integer id) {
 		List<Facture> list = findAllFactures();
 		for (Facture f : list) {

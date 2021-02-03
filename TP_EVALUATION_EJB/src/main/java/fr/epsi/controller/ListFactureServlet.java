@@ -12,13 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 import fr.epsi.entite.Facture;
 import fr.epsi.service.FactureService;
 
-//Couche WEB
 public class ListFactureServlet extends HttpServlet {
 
 	@EJB
 	private FactureService service;
-	// même chose
-	// private VoitureService service = new VoitureServiceImpl();
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 

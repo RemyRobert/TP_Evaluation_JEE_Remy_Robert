@@ -7,7 +7,7 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	<persistence-unit name="evaluationPU">
 
 		<jta-data-source>java:/EvaluationDS</jta-data-source>
-		
+
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="none" />
 		</properties>

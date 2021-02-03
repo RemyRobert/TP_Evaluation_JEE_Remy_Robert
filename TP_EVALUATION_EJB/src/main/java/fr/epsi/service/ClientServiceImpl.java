@@ -1,6 +1,5 @@
 package fr.epsi.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -15,7 +14,6 @@ import fr.epsi.dao.ClientDao;
 import fr.epsi.dao.ClientDaoImpl;
 import fr.epsi.dto.ClientDTO;
 import fr.epsi.entite.Client;
-import fr.epsi.entite.Facture;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.BEAN)
@@ -43,6 +41,5 @@ public class ClientServiceImpl implements ClientService {
 				.getResultList();
 		return listeClients;
 	}
-
 
 }
